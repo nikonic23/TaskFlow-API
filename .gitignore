@@ -1,0 +1,23 @@
+# Python
+backend/venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local database / runtime files
+backend/instance/
+*.db
+
+# Environment variables
+backend/.env
+frontend/.env
+
+# Node modules
+frontend/node_modules/
+
+# Vite build
+frontend/dist/
+
+# OS files
+.DS_Store
+Thumbs.db

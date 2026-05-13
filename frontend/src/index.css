@@ -1,0 +1,15 @@
+﻿body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
