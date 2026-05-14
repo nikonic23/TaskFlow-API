@@ -16,12 +16,15 @@ class Config:
     else:
         # URL-encode password to handle special characters like @
         db_password = quote_plus(os.getenv("DB_PASSWORD", ""))
+        db_username = os.getenv("DB_USERNAME", "root")
+        db_host = os.getenv("DB_HOST", "localhost")
+        db_name = os.getenv("DB_NAME", "internshala_backend")
 
         SQLALCHEMY_DATABASE_URI = (
-            f"mysql+pymysql://{os.getenv('DB_USERNAME')}:"
+            f"mysql+pymysql://{db_username}:"
             f"{db_password}@"
-            f"{os.getenv('DB_HOST')}/"
-            f"{os.getenv('DB_NAME')}"
+            f"{db_host}/"
+            f"{db_name}"
         )
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
